@@ -18,5 +18,10 @@
 		from myboard
 		where idx = #{idx}
 	</select>
+	
+	<delete id="boardDelete" parameterType="int">
+		delete from myboard
+		where idx = #{idx}
+	</delete>
 
 </mapper>
