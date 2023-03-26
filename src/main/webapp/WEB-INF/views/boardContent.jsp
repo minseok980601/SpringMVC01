@@ -17,25 +17,31 @@
   <div class="panel panel-default">
     <div class="panel-heading">Board</div>
     <div class="panel-body">
-    	<table class="table table-bordered table-hover">
+    	<table class="table">
     		<tr>
-    			<td>번호</td>
     			<td>제목</td>
-    			<td>작성자</td>
-    			<td>작성일</td>
-    			<td>조회수</td>
+    			<td>${vo.title}</td>
     		</tr>
-    		<c:forEach var="vo" items="${list}" begin="0" end="5">
-    			<tr>
-    				<td>${vo.idx }</td>
-    				<td><a href="boardContent.do?idx=${vo.idx}">${vo.title }</a></td>
-    				<td>${vo.writer }</td>
-    				<td>${vo.indate }</td>
-    				<td>${vo.count }</td>
-    			</tr>
-    		</c:forEach>
+    		<tr>
+    			<td>내용</td>
+    			<td>${vo.content}</td>
+    		</tr>
+    		<tr>
+    			<td>작성자</td>
+    			<td>${vo.writer}</td>
+    		</tr>
+    		<tr>
+    			<td>작성일</td>
+    			<td>${vo.indate }</td>
+    		</tr>
+    		<tr>
+    			<td colspan="2">
+    				<button class="btn btn-primary btn-sm">수정화면</button>
+    				<button class="btn btn-warning btn-sm">삭제</button>
+    				<button class="btn btn-info btn-sm">목록</button>
+    			</td>
+    		</tr>
     	</table>
-    	<a href="boardForm.do" class="btn btn-primary btn-sm">글쓰기</a>
     </div>
     <div class="panel-footer">인프런_스프1탄_박매일</div>
   </div>
